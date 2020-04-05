@@ -12,7 +12,7 @@ This application would usually span across multiple Jenkins pipelines.
 - IAM Role with permissions to run Terraform
 - S3 Bucket to store TF state
     - bucket policy permissions
-- terraform/env/{workspace}/tfsettings.yaml configured as per your requirements
+- terraform/env/{workspace}/tfsettings.yaml configured as per your requirements (use example.yaml as template)
 
 
 # Terraform
