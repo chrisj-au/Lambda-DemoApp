@@ -1,0 +1,4 @@
+log_days: 5
+log_level: ERROR
+env_tags:
+    environment: production
