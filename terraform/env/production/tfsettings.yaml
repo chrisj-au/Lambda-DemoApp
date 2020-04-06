@@ -2,3 +2,5 @@ log_days: 5
 log_level: ERROR
 env_tags:
     environment: production
+short_name: prod
+description: "TF production"

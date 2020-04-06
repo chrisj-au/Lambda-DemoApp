@@ -2,15 +2,18 @@ variable "name" {
     description = "Used to name resources created"
 }
 
-variable "aws_region" {
-    default = "ap-southeast-2"
-    description = "AWS Region to deploy to"
+variable "accountId" {
+    description = "AWS Account Id"
 }
 
-variable "log_level" {
-    desription = "Lambda & API Gateway log level"
+variable "lambda_zip" {
+    description = "Lambda source code zip"
 }
 
-variable "log_duration" {
-    description = "Length of time to keep Lambda & API Gateway logs"
+variable "lambda_handler" {
+    description = "Lambda event handler"
+}
+
+variable "env" {
+    
 }

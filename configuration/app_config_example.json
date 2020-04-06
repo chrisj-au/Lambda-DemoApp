@@ -1,0 +1,6 @@
+{ 
+    "accountId": "123456",
+    "name": "testApp",
+    "lambda_zip": "../source_code/builds/myPython.zip",
+    "lambda_handler": "get_handler.lambda_handler"
+}
