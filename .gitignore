@@ -5,6 +5,7 @@
 *.tfstate
 *.tfstate.*
 
+*.zip
 
 # Configuration files except examples
 configuration/*

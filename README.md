@@ -42,15 +42,12 @@ Workspaces underpin the configuration of the Terraform files.
 Configuration has been split into 2 sections, Environment/Workspaces which is maintained by cloud engineers and application configuration which is used by developers as input into the naming of solutions etc.  Any configuration can be exposed to the developers however limiting inputs allows for greater enforcement of company policies.
 
 ### Environments / Workspaces
+
 To declare an environment configuration create a tfsettings.yaml file within the 'env' folder using the path terraform/env/{workspace_name}/tfsettings.yaml where {workspace_name} is the workspace used for the environment.
 
 ### Application Configuration
 
-Configuration has been extracted out of TF into yaml files.
-
-
-
-
+YAML is not able to be used to provide input variables, this is in contrast to environment configuration.
 
 Zip file for lambda must be local to where Terraform is being executed.
 
@@ -62,6 +59,9 @@ terraform init -backend-config="bucket={app_name}" -backend-config="region={regi
 terraform plan -var-file="../configuration/app_config.json"
 ```
 
-
 # Jenkins
 
+
+# Issues / To Do
+
+Application configuration in Terraform is JSON as YAML isn't supported using -var-file however environment configuration *is* YAML.  This is not ideal using 2 syntax's for configuration - either env config should be changed to JSON or we wait for TF to support YAML input vars.
